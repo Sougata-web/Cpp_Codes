@@ -25,12 +25,12 @@ int main(){
     // cout<<bike_count<<endl;
     // cout<<nrrw_assignment<<endl;
 
-    unsigned int value {4};
+    // unsigned int value {4};
     // unsigned int value1 {-5};// Compiler error
-    cout<<value<<endl;
-    cout<<sizeof( long int)<< " bytes"<<endl;
-    cout<<sizeof(signed long long int)<< " bytes"<<endl;
-    cout<<sizeof(unsigned long long int)<< " bytes"<<endl;
+    // cout<<value<<endl;
+    // cout<<sizeof( long int)<< " bytes"<<endl;
+    // cout<<sizeof(signed long long int)<< " bytes"<<endl;
+    // cout<<sizeof(unsigned long long int)<< " bytes"<<endl;
 
 
     return 0;
