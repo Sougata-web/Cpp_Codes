@@ -89,6 +89,16 @@ int main(){
     // cout<<"var7 occupies: "<<sizeof(var7)<<" bytes"<<endl;
     // cout<<"var8 occupies: "<<sizeof(var8)<<" bytes"<<endl;
 
+    // double var {44.55};
+    // cout<<var<<endl;
+    // var=99.77;
+    // cout<<var<<endl;
+    
+    // auto var3 {333u};
+
+    // // var3 = -4;//assigning negative value gives an garbage value
+    // cout<<var3<<endl;
+
 
     return 0;
 }
