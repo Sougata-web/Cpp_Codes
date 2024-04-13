@@ -38,24 +38,55 @@ int main(){
     // cout<<x<<endl;
     // cout<<"Size of x: "<<sizeof(x)<<endl;
 
-    double x{12.5};
-    double y{34.6};
+    // double x{12.5};
+    // double y{34.6};
 
-    int sum=x+y;
-    cout<<sum<<endl;
-    cout<<sizeof(sum)<<endl;
-    sum=static_cast<int>(x)+static_cast<int>(y);
-    cout<<sum<<endl;
-    cout<<sizeof(sum)<<endl;
+    // int sum=x+y;
+    // cout<<sum<<endl;
+    // cout<<sizeof(sum)<<endl;
+    // sum=static_cast<int>(x)+static_cast<int>(y);
+    // cout<<sum<<endl;
+    // cout<<sizeof(sum)<<endl;
 
-    sum=static_cast<int>(x+y);
-    cout<<sum<<endl;
+    // sum=static_cast<int>(x+y);
+    // cout<<sum<<endl;
 
-    double PI {3.14};
+    // double PI {3.14};
 
-    int int_pi=static_cast<int>(PI);
-    cout<<PI<<endl;
-    cout<<int_pi<<endl;
+    // int int_pi=static_cast<int>(PI);
+    // cout<<PI<<endl;
+    // cout<<int_pi<<endl;
+
+    unsigned char data {250};
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data; 
+    std::cout << "data : " << std::hex <<  static_cast<int>(data) << std::endl; // 255
+
+    ++data;  // Overflow
+    std::cout << "data : " << static_cast<int>(data) << std::endl; // 256
+
+    std::cout << std::dec ;
+
+
+    data = 1;
+
+    --data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    --data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
     
     return 0;
 }
