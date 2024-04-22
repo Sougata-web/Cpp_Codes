@@ -137,6 +137,7 @@ int main(){
     std::cout << "int_array2.front() : " << int_array2.front() << std::endl;
     std::cout << "int_array2.back() : " << int_array2.back() << std::endl;
     //data method
+    // print_raw_array(int_array2.data(),int_array2.size());
     print_raw_array(int_array2.data(),int_array2.size());
 
 
