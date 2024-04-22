@@ -122,7 +122,7 @@ int main(){
     std::cout << std::endl;
     std::cout << "Filling the array : " << std::endl;
     int_array1.fill(321);
-    int_array4.fill(500);
+    int_array4.fill(200);
     std::cout << "int_array1 : " ;
     print_array(int_array1);
     std::cout << "int_array4 : " ;
@@ -138,6 +138,8 @@ int main(){
     std::cout << "int_array2.back() : " << int_array2.back() << std::endl;
     //data method
     print_raw_array(int_array2.data(),int_array2.size());
+
+
 
 
     
