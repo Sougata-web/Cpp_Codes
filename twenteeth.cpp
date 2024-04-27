@@ -181,69 +181,115 @@ int main(){
 //     std::cout << "ref_double_data : " << ref_double_data << std::endl;
 //     std::cout << "&ref_double_data : " << &ref_double_data << std::endl;
 
-     double double_value {12.34};
-    double& ref_double_value {double_value}; // Reference to double_value
-    double* p_double_value {&double_value}; //Pointer to double_value
+    // double double_value {12.34};
+    // double& ref_double_value {double_value}; // Reference to double_value
+    // double* p_double_value {&double_value}; //Pointer to double_value
 	
-	//Reading
-	std::cout << "double_value : " << double_value << std::endl;
-	std::cout << "ref_double_value : " << ref_double_value << std::endl;
-	std::cout << "p_double_value : " << p_double_value << std::endl;
-	std::cout << "*p_double_value : " << *p_double_value << std::endl;
-    cout<<endl;
-    *p_double_value = 15.44;
+	// //Reading
+	// std::cout << "double_value : " << double_value << std::endl;
+	// std::cout << "ref_double_value : " << ref_double_value << std::endl;
+	// std::cout << "p_double_value : " << p_double_value << std::endl;
+	// std::cout << "*p_double_value : " << *p_double_value << std::endl;
+    // cout<<endl;
+    // *p_double_value = 15.44;
 	
-    std::cout << std::endl;
-	std::cout << "double_value : " << double_value << std::endl;
-	std::cout << "ref_double_value : " << ref_double_value << std::endl;
-	std::cout << "p_double_value : " << p_double_value << std::endl;
-	std::cout << "*p_double_value : " << *p_double_value << std::endl;
+    // std::cout << std::endl;
+	// std::cout << "double_value : " << double_value << std::endl;
+	// std::cout << "ref_double_value : " << ref_double_value << std::endl;
+	// std::cout << "p_double_value : " << p_double_value << std::endl;
+	// std::cout << "*p_double_value : " << *p_double_value << std::endl;
 
-    cout<<endl;
-    ref_double_value = 18.44;
+    // cout<<endl;
+    // ref_double_value = 18.44;
 	
-    std::cout << std::endl;
-	std::cout << "double_value : " << double_value << std::endl;
-	std::cout << "ref_double_value : " << ref_double_value << std::endl;
-	std::cout << "p_double_value : " << p_double_value << std::endl;
-	std::cout << "*p_double_value : " << *p_double_value << std::endl;
+    // std::cout << std::endl;
+	// std::cout << "double_value : " << double_value << std::endl;
+	// std::cout << "ref_double_value : " << ref_double_value << std::endl;
+	// std::cout << "p_double_value : " << p_double_value << std::endl;
+	// std::cout << "*p_double_value : " << *p_double_value << std::endl;
 
-     double some_other_double{78.45};
+    //  double some_other_double{78.45};
 
-    //Make the reference reference something else.
-    ref_double_value = some_other_double;
+    // //Make the reference reference something else.
+    // ref_double_value = some_other_double;
 
-    std::cout << "Making the reference reference something else..." << std::endl;
-    std::cout << std::endl;
-	std::cout << "double_value : " << double_value << std::endl;
-	std::cout << "ref_double_value : " << ref_double_value << std::endl;
-	std::cout << "p_double_value : " << p_double_value << std::endl;
-	std::cout << "*p_double_value : " << *p_double_value << std::endl;
-
-
-
-    //Make the pointer point to something else
-    p_double_value = &some_other_double;
-    std::cout << "Making the pointer point somewhere else..." << std::endl;
-    std::cout << std::endl;
-	std::cout << "double_value : " << double_value << std::endl;
-	std::cout << "ref_double_value : " << ref_double_value << std::endl;
-    std::cout << "&double_value : " << &double_value << std::endl;
-    std::cout << "&ref_double_value : " << &ref_double_value << std::endl;
-	std::cout << "p_double_value : " << p_double_value << std::endl;
-	std::cout << "*p_double_value : " << *p_double_value << std::endl;
+    // std::cout << "Making the reference reference something else..." << std::endl;
+    // std::cout << std::endl;
+	// std::cout << "double_value : " << double_value << std::endl;
+	// std::cout << "ref_double_value : " << ref_double_value << std::endl;
+	// std::cout << "p_double_value : " << p_double_value << std::endl;
+	// std::cout << "*p_double_value : " << *p_double_value << std::endl;
 
 
-    *p_double_value = 555.5;
 
-    std::cout << std::endl;
-	std::cout << "double_value : " << double_value << std::endl;
-	std::cout << "ref_double_value : " << ref_double_value << std::endl;
-    std::cout << "&double_value : " << &double_value << std::endl;
-    std::cout << "&ref_double_value : " << &ref_double_value << std::endl;
-	std::cout << "p_double_value : " << p_double_value << std::endl;
-	std::cout << "*p_double_value : " << *p_double_value << std::endl;
+    // //Make the pointer point to something else
+    // p_double_value = &some_other_double;
+    // std::cout << "Making the pointer point somewhere else..." << std::endl;
+    // std::cout << std::endl;
+	// std::cout << "double_value : " << double_value << std::endl;
+	// std::cout << "ref_double_value : " << ref_double_value << std::endl;
+    // std::cout << "&double_value : " << &double_value << std::endl;
+    // std::cout << "&ref_double_value : " << &ref_double_value << std::endl;
+	// std::cout << "p_double_value : " << p_double_value << std::endl;
+	// std::cout << "*p_double_value : " << *p_double_value << std::endl;
+
+
+    // *p_double_value = 555.5;
+
+    // std::cout << std::endl;
+	// std::cout << "double_value : " << double_value << std::endl;
+	// std::cout << "ref_double_value : " << ref_double_value << std::endl;
+    // std::cout << "&double_value : " << &double_value << std::endl;
+    // std::cout << "&ref_double_value : " << &ref_double_value << std::endl;
+	// std::cout << "p_double_value : " << p_double_value << std::endl;
+	// std::cout << "*p_double_value : " << *p_double_value << std::endl;
+
+
+    // std::cout << std::endl;
+	// std::cout << "Non const reference : " << std::endl;
+	// int age {27};
+	// const int& ref_age{age};
+	// std::cout << "age : " << age << std::endl;
+	// std::cout << "ref_age : " << ref_age << std::endl;
+	
+	
+	// //Can modify original variable through reference
+
+	// std::cout << std::endl;
+	// std::cout << "Modify original variable through reference : " << std::endl;
+	
+	// ref_age++; //Mofify through reference
+	
+	// std::cout << "age : " << age << std::endl;
+	// std::cout << "ref_age : " << ref_age << std::endl;
+    
+    //Simulating reference behavior with pointers
+//    const int * const p_age {&age};
+//    *p_age = 45;
 
     
+    int scores[] {1,2,3,4,5,6,7,8,9,10};
+    
+    //Printing positions
+    std::cout << std::endl;
+	
+	std::cout << "Scores : ";
+    for ( auto score : scores){
+        std::cout << " " << score ;
+    }
+	std::cout << std::endl;
+
+
+   for ( auto& score : scores){
+        score = score * 10;
+    }
+
+    //Printing after change
+     std::cout << std::endl;
+	std::cout << "Scores : ";
+    for ( auto score : scores){
+        std::cout << " " << score ;
+    }
+	std::cout << std::endl;
     return 0;
 }
