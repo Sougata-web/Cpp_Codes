@@ -54,21 +54,42 @@ int main(){
     // std::cout << "Found " << lowercase_count << " lowercase characters and "
     //             <<upppercase_count << " uppercase characters."<<  std::endl;
 
-    std::cout << std::endl;
-    std::cout << "std::isdigit : "<<std::endl;
+    // std::cout << std::endl;
+    // std::cout << "std::isdigit : "<<std::endl;
 
-    char statement[] {"Mr Hamilton owns 221 cows. That's a lot of cows! The kid exclamed."};
-	std::cout << "statement : " << statement << std::endl;
+    // char statement[] {"Mr Hamilton owns 221 cows. That's a lot of cows! The kid exclamed."};
+	// std::cout << "statement : " << statement << std::endl;
     
-    size_t digit_count{};
+    // size_t digit_count{};
     
-    for(auto character : statement){
-        if(std::isdigit(character)){
-            std::cout << "Found digit : " << character << std::endl;
-            ++digit_count;
-        }
-    }
-    std::cout << "Found " << digit_count << " digits in the statement string" << std::endl;
+    // for(auto character : statement){
+    //     if(std::isdigit(character)){
+    //         std::cout << "Found digit : " << character << std::endl;
+    //         ++digit_count;
+    //     }
+    // }
+    // std::cout << "Found " << digit_count << " digits in the statement string" << std::endl;
+
+    // std::cout << std::endl;
+    // std::cout << "std::tolwer and std::toupper: " << std::endl;
+    // char original_str[] {"Home. The feeling of belonging"};
+    // char dest_str[std::size(original_str)];
+    
+    
+    // //Turn this to uppercase. Change the array in place
+    // for(size_t i{}; i < std::size(original_str) ; ++i){
+    //     dest_str[i] = std::toupper(original_str[i]);
+    // }
+    
+    // std::cout << "Original string : " << original_str << std::endl;
+    // std::cout << "Uppercase string : " << dest_str << std::endl;
+    
+    // //Turn this to lowercase. Change the array in place
+    // for(size_t i{}; i < std::size(original_str) ; ++i){
+    //     dest_str[i] = std::tolower(original_str[i]);
+    // }
+    
+    // std::cout << "Lowercase string : " << dest_str << std::endl;
 
 
     return 0;
