@@ -111,29 +111,68 @@ int main()
 
     //Find the first occurrence of a character 
 	//CODE STOLEN FROM THE DOCS : 
-    /*
-    std::cout << std::endl;
-    std::cout << "std::strchr : " << std::endl;
-	//doc : https://en.cppreference.com/w/cpp/string/byte/strchr
     
-	//we use std::strchr to find all the characters one by one.
+    // std::cout << std::endl;
+    // std::cout << "std::strchr : " << std::endl;
+	// //doc : https://en.cppreference.com/w/cpp/string/byte/strchr
+    
+	// //we use std::strchr to find all the characters one by one.
 
-	const char * const str { "Try not. Do, or do not. There is no try."};
-    //Can make this a const pointer to prevent users from making it point somewhere else
-	char target = 'T';
-	const char *result = str;
-	size_t iterations{};
+	// const char * const str { "Try not. Do, or do not. There is no try."};
+    // //Can make this a const pointer to prevent users from making it point somewhere else
+	// char target = 'T';
+	// const char *result = str;
+	// size_t iterations{};
 	
  
-	while ((result = std::strchr(result, target)) != nullptr) {
-		std::cout << "Found '" << target
-				<< "' starting at '" << result << "'\n";
+	// while ((result = std::strchr(result, target)) != nullptr) {
+	// 	std::cout << "Found '" << target
+	// 			<< "' starting at '" << result << "'\n";
  
-		// Increment result, otherwise we'll find target at the same location
-		++result;
-		++iterations;
-	}
-	std::cout << "iterations : " << iterations << std::endl;
-    */
+	// 	// Increment result, otherwise we'll find target at the same location
+	// 	++result;
+	// 	++iterations;
+	// }
+	// std::cout << "iterations : " << iterations << std::endl;
+    
+
+     //A lesser version that will loop 25 times
+    
+	//Find the first occurrence of a character 
+	//CODE STOLEN FROM THE DOCS : 
+	// std::cout << std::endl;
+	// std::cout << "std::strchr : " << std::endl;
+	// //doc : https://en.cppreference.com/w/cpp/string/byte/strchr
+
+	// //we use std::strchr to find all the characters one by one.
+
+	// const char* str{ "Try not. Do, or do not. There is no try." };
+	// char target = 'T';
+	// const char* result{ nullptr };
+	// size_t iterations{};
+
+
+	// while ((result = std::strchr(str, target)) != nullptr) {
+	// 	std::cout << "Found '" << target
+	// 		<< "' starting at '" << result << "'\n";
+
+	// 	// Increment result, otherwise we'll find target at the same location
+	// 	++str; // Making the pointer point to the next character
+	// 	++iterations;
+	// }
+	// std::cout << "iterations : " << iterations << std::endl;
+    
+
+    //Find last occurence
+	//CODE STOLEN FROM THE DOCS : 
+    std::cout << std::endl;
+    std::cout << "std::strrchr : " << std::endl;
+	//doc : https://en.cppreference.com/w/cpp/string/byte/strrchr
+	
+    char input[] = "/home/user/hello.cpp";
+    char* output = std::strrchr(input, '/');
+    if(output)
+        std::cout << output+1 << std::endl; //+1 because we want to start printing past 
+                                            // the character found by std::strrchr.
     return 0;
 }
