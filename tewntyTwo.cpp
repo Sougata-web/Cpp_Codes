@@ -165,14 +165,25 @@ int main()
 
     //Find last occurence
 	//CODE STOLEN FROM THE DOCS : 
-    std::cout << std::endl;
-    std::cout << "std::strrchr : " << std::endl;
-	//doc : https://en.cppreference.com/w/cpp/string/byte/strrchr
+    // std::cout << std::endl;
+    // std::cout << "std::strrchr : " << std::endl;
+	// //doc : https://en.cppreference.com/w/cpp/string/byte/strrchr
 	
-    char input[] = "/home/user/hello.cpp";
-    char* output = std::strrchr(input, '/');
-    if(output)
-        std::cout << output+1 << std::endl; //+1 because we want to start printing past 
-                                            // the character found by std::strrchr.
+    // char input[] = "/home/user/hello.cpp";
+    // char* output = std::strrchr(input, '/');
+    // if(output)
+    //     std::cout << output+1 << std::endl; //+1 because we want to start printing past 
+    //                                         // the character found by std::strrchr.
+
+    string input{"I Love You"};
+
+   
+    // std::getline(std::cin, input);
+
+    for (size_t i = 0; i < input.length(); ++i) {
+        
+        std::cout << input.substr(0, i + 1) << std::endl;
+        
+    }
     return 0;
 }
