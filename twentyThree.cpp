@@ -61,18 +61,24 @@ int main(){
     // std::cout << "std::strlen(dest3) : " << std::strlen(dest3) << std::endl;
     // std::cout << "dest3 : " << dest3 << std::endl;
 
-    std::cout << std::endl;
-    std::cout << "std::strncpy:" << std::endl;
-    const char* source4 = "Hello";
-    char dest4[] = {'a', 'b', 'c', 'd', 'e', 'f','\0'}; // Have to put the terminating
-														//null char if we want to print
+    // std::cout << std::endl;
+    // std::cout << "std::strncpy:" << std::endl;
+    // const char* source4 = "Hello";
+    // char dest4[] = {'a', 'b', 'c', 'd', 'e', 'f','\0'}; // Have to put the terminating
+	// 													//null char if we want to print
     
-    std::cout << "dest4 : " << dest4 << std::endl;
+    // std::cout << "dest4 : " << dest4 << std::endl;
     
-	std::cout << "Copying..." << std::endl;
-    std::strncpy(dest4,source4,5);
+	// std::cout << "Copying..." << std::endl;
+    // std::strncpy(dest4,source4,5);
     
-    std::cout << "dest4 : " << dest4 << std::endl;
+    // std::cout << "dest4 : " << dest4 << std::endl;
+
+    string weird_message(4,'e');
+
+    cout<<weird_message<<endl;
+
+
 
     return 0;
 }
