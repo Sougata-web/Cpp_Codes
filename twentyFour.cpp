@@ -291,20 +291,36 @@ int main()
 	// std::cout << "str9 : " << str9.erase(11,str9.size() - 12) << std::endl;
 
 
-    //push_back
-    //void push_back( CharT ch );
-	//Appends the given character ch to the end of the string. 
-    std::string str10 {"Hello World"};
-    str10.push_back('!');
-    std::cout << "str10 : " << str10 << std::endl;
+    // //push_back
+    // //void push_back( CharT ch );
+	// //Appends the given character ch to the end of the string. 
+    // std::string str10 {"Hello World"};
+    // str10.push_back('!');
+    // std::cout << "str10 : " << str10 << std::endl;
 	
 
-    //pop_back
-    //void pop_back();
-	//Removes the last character from the string. 
-    std::string str11 {"Hello World!!"};
-    str11.pop_back();
-    std::cout << "str11 : " << str11 << std::endl;
+    // //pop_back
+    // //void pop_back();
+	// //Removes the last character from the string. 
+    // std::string str11 {"Hello World!!"};
+    // str11.pop_back();
+    // std::cout << "str11 : " << str11 << std::endl;
+
+    std::string hello_str{"Hello"};
+    std::string bello_str{"Bello"};
+    
+    
+	//Using the comparison operators
+	std::cout << std::endl;
+	std::cout << "Comparing with comparison operators : " << std::endl;
+	
+	std::cout << std::boolalpha;
+    std::cout << hello_str << "==" <<  bello_str <<" : " << (hello_str == bello_str) << std::endl;//false
+    std::cout << hello_str << "!=" <<  bello_str <<" : " << (hello_str != bello_str) << std::endl; //true
+    std::cout << hello_str << ">" <<  bello_str <<" : " << (hello_str > bello_str) << std::endl; // true
+    std::cout << hello_str << ">=" <<  bello_str <<" : " << (hello_str >= bello_str) << std::endl; // true
+    std::cout << hello_str << "<" <<  bello_str <<" : " << (hello_str < bello_str) << std::endl; // false
+    std::cout << hello_str << "<=" <<  bello_str <<" : " << (hello_str <= bello_str) << std::endl; // false
 
     return 0;
 }
