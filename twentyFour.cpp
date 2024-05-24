@@ -177,17 +177,134 @@ int main()
     //     std::cout << "str3 contains " << str3.length() << " characters" << std::endl; // 0
 
 
-    std::string str1 {"Hello World"};
-    std::cout << "std::string can hold " << str1.max_size() << " characters" << std::endl;
+    // std::string str1 {"Hello World"};
+    // std::cout << "std::string can hold " << str1.max_size() << " characters" << std::endl;
 
-    std::string str1 {"Hello World"};
-    std::string str2;
-    std::cout << "str1 capacity : " << str1.capacity() << std::endl;
-	std::cout << "str2 capacity : " << str2.capacity() << std::endl;
+    // std::string str1 {"Hello World"};
+    // std::string str2;
+    // std::cout << "str1 capacity : " << str1.capacity() << std::endl;
+	// std::cout << "str2 capacity : " << str2.capacity() << std::endl;
 	
-	str1 = "The sky is so blue, the grass is green. Kids are running all over the place";
+	// str1 = "The sky is so blue, the grass is green. Kids are running all over the place";
 	
-    std::cout << "str1 size : " << str1.size() << std::endl;
-	std::cout << "str1 capacity : " << str1.capacity() << std::endl;
+    // std::cout << "str1 size : " << str1.size() << std::endl;
+	// std::cout << "str1 capacity : " << str1.capacity() << std::endl;
+
+
+    // std::string str1 {"Hello World"};
+	// std::cout << "str1 capacity : " << str1.capacity() << std::endl; // 15
+	// std::cout << "str1 size : " << str1.size() << std::endl;
+
+    // str1.reserve(100);
+    
+    // std::cout << "str1 after reserve : " << str1 << std::endl; 
+	// std::cout << "str1 capacity : " << str1.capacity() << std::endl; // 100
+	// std::cout << "str1 size : " << str1.size() << std::endl;
+
+
+    // std::string str1 {"Hello World"}; // 11
+    // str1.reserve(100);
+
+	// std::cout << "str1 capacity : " << str1.capacity() << std::endl; //100
+	// std::cout << "str1 size : " << str1.size() << std::endl; // 11
+
+	// str1.shrink_to_fit();
+ 
+	// std::cout << "str1 capacity : " << str1.capacity() << std::endl; //11
+	// std::cout << "str1 size : " << str1.size() << std::endl;//11
+
+
+    //  std::string str1 {"The Lion Dad"};
+    
+    // std::cout << "str1 is : " << str1 << std::endl;
+    // std::cout << "str1 size : " << str1.size() << std::endl;
+    // std::cout << "str1 capacity : " << str1.capacity() << std::endl;
+    
+    // str1.clear();
+
+	// std::cout << std::endl;
+    // std::cout << "str1 is : " << str1 << std::endl;
+    // std::cout << "str1 size : " << str1.size() << std::endl;
+    // std::cout << "str1 capacity : " << str1.capacity() << std::endl;
+
+
+    //  std::string str2 {"122"};
+    // std::cout << "str2 : " << str2 << std::endl;
+    
+    // str2.insert(1,4,'3');//Count can be 1,2,5,..
+	
+	// std::cout << std::endl;
+    // std::cout << "str2 : " << str2 << std::endl;//1333322
+
+
+    //  std::string str3 {"Hello!"};
+    // const char * txt3{" World"};
+	
+	// std::cout << "str3 : " << str3 << std::endl;//Hello
+	
+    // str3.insert(5,txt3);
+	
+    // std::cout << std::endl;
+    // std::cout << "str3 : " << str3 << std::endl;//Hello World!
+
+    // std::string str4{"Hello!"};
+    // const char * txt4{" World Health Organization"};
+	
+	// std::cout << "str4 : " << str4 << std::endl;
+
+    // str4.insert(5,txt4,6);
+	
+    // std::cout << std::endl;
+    // std::cout << "str4 : " << str4 << std::endl;
+
+
+    // std::string str5{" World"};
+    // std::string str6{"Hello!"};
+	
+	// std::cout << "str6 : " << str6 << std::endl;
+
+    // str6.insert(5,str5);
+	
+    // std::cout << std::endl;
+    // std::cout << "str6 : " << str6 << std::endl;
+
+
+    // std::string str7{"Hello!"};
+    // std::string str8{"Statistical Analysis of the World Population."};
+	
+	// std::cout << "str7 : " << str7 << std::endl;
+
+    // str7.insert(5,str8,27,6);
+	
+    // std::cout << std::endl;
+    // std::cout << "str7 : " << str7 << std::endl;
+
+
+    // std::string str9 {"Hello World is a message used to start off things when learning programming!"};;
+    
+    // str9.erase(11,str9.size() - 12);
+	// std::cout << "str9 : " << str9 << std::endl;
+
+    // str9 = "Hello World is a message used to start off things when learning programming!";
+	
+	//Direct print out.Because this method returns a reference to the modified string
+	// std::cout << "str9 : " << str9.erase(11,str9.size() - 12) << std::endl;
+
+
+    //push_back
+    //void push_back( CharT ch );
+	//Appends the given character ch to the end of the string. 
+    std::string str10 {"Hello World"};
+    str10.push_back('!');
+    std::cout << "str10 : " << str10 << std::endl;
+	
+
+    //pop_back
+    //void pop_back();
+	//Removes the last character from the string. 
+    std::string str11 {"Hello World!!"};
+    str11.pop_back();
+    std::cout << "str11 : " << str11 << std::endl;
+
     return 0;
 }
