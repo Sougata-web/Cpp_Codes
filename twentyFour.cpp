@@ -99,15 +99,63 @@ int main(){
     // }
     // cout<<endl;
 
-    std::string str1 {"Hello there"};
-    std::cout << std::endl;
-    std::cout << "Using range based for loop : "<< std::endl;
+    // std::string str1 {"Hello there"};
+    // std::cout << std::endl;
+    // std::cout << "Using range based for loop : "<< std::endl;
 	
-	std::cout << "str1(range based for loop) : " ;
-    for(char value : str1){
-        std::cout << " " << value ;
-    }
-	std::cout << std::endl;
+	// std::cout << "str1(range based for loop) : " ;
+    // for(char value : str1){
+    //     std::cout << " " << value ;
+    // }
+	// std::cout << std::endl;
+
+
+    // std::cout << std::endl;
+    // std::cout << "Using the std::string::at() method : "<< std::endl;
+
+    // std::string str1 {"Hello there"};
+	// std::cout << "str1 : (for loop with at()) : " ;
+
+    // for(size_t i{}; i < str1.size(); ++i){
+    //     std::cout << " " << str1.at(i) ;
+    // }
+	// std::cout << std::endl;
+
+    // string str1 {"Hello there"};
+
+    // str1[0]='B';
+    // str1.at(1)='a';
+
+    // cout<<"Modified string: "<<str1<<endl;
+
+    // std::string str2{"The Phoenix King"};    
+    // char& front_char = str2.front();
+    // char& back_char = str2.back();
+    // std::cout << "The front char in str2 is : " << front_char << std::endl;
+    // std::cout << "The back char in str2 is : " << back_char << std::endl;
+
+    // front_char = 'r';
+    // back_char = 'd';
+
+    // std::cout << "str2 : " << str2 << std::endl;
+
+
+    // std::string str2{"The Phoenix King"}; 
+    // const char * wrapped_c_string = str2.c_str();
+    // std::cout << "Wrapped c string : " << wrapped_c_string << std::endl;
+
+
+    std::string str2 { "Hello World"};
+    
+    char * data = str2.data();
+    std::cout << "Wrapped c string : " << data << std::endl;
+    
+    data[0] = 'B';// This also changes std::string.
+    
+    std::cout << "Wrapped c string (after modification) : " << data << std::endl;
+    std::cout << "Original string (after modification ) :" << str2 << std::endl;
+
+
 
 
     
