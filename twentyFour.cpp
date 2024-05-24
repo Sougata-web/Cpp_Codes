@@ -88,7 +88,26 @@ int main(){
 
     // cout<<"str26 : "<<str26<<endl;
 
-    
+
+    // string str1{"Hello there "};
+
+    // cout<<str1.size()<<endl;
+
+    // cout<<"Str1(for loop ) : ";
+    // for(size_t i{};i<str1.size();++i){
+    //     cout<<" "<<str1[i];
+    // }
+    // cout<<endl;
+
+    std::string str1 {"Hello there"};
+    std::cout << std::endl;
+    std::cout << "Using range based for loop : "<< std::endl;
+	
+	std::cout << "str1(range based for loop) : " ;
+    for(char value : str1){
+        std::cout << " " << value ;
+    }
+	std::cout << std::endl;
 
 
     
