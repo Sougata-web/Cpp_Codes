@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string_view>
-#include<string>
+#include<cstring>
 using namespace std;
 
 int main(){
@@ -239,23 +239,48 @@ int main(){
     
     // std::cout << "word : " << sv9 << std::endl;
 
-    const char * c_string1 { "The animals have left the region" };
-    std::string_view sv10{c_string1};
+    // const char * c_string1 { "The animals have left the region" };
+    // std::string_view sv10{c_string1};
     
-    std::cout << "sv10 : " << sv10 << std::endl;
+    // std::cout << "sv10 : " << sv10 << std::endl;
     
-    sv10.remove_prefix(4); // Removes "The"
+    // sv10.remove_prefix(4); // Removes "The"
     
-	//Prints : animals have left the region
-    std::cout << "View with removed prefix(4) : " << sv10 << std::endl;
+	// //Prints : animals have left the region
+    // std::cout << "View with removed prefix(4) : " << sv10 << std::endl;
     
-    sv10.remove_suffix(10); // Removes "the region"
+    // sv10.remove_suffix(10); // Removes "the region"
     
-	//Prints : animals have left
-    std::cout << "View with removed suffix(10) : " << sv10 << std::endl;
+	// //Prints : animals have left
+    // std::cout << "View with removed suffix(10) : " << sv10 << std::endl;
     
-    //Changing the view doesn't change the viewed string : 
-    std::cout << "Original sv10 viewed string : " << c_string1 << std::endl;
+    // //Changing the view doesn't change the viewed string : 
+    // std::cout << "Original sv10 viewed string : " << c_string1 << std::endl;
+
+    //  std::string_view sv11;
+    
+    // {
+    //     std::string string4{"Hello there"};
+    //     sv11 = string4;
+    //     std::cout << "INSIDE --- sv11 is viewing : " << sv11 << std::endl;
+        
+        
+    //     //string4 goes out of scope here.
+    // }
+    // std::cout << "OUTSIDE --- sv1 is viewing : " << sv11 << std::endl;
+
+    // std::string_view sv13 {"Ticket"};
+    // std::cout << "sv13 : " << sv13 << std::endl;
+    // std::cout << "std::strlen(sv13.data()) : " << std::strlen(sv13.data()) << std::endl;
+
+    std::string_view sv14 {"Ticket"};
+    sv14.remove_prefix(2);
+    sv14.remove_suffix(2);
+    
+    //Length info is lost when you modify the view
+    std::cout << sv14 << " has " << std::strlen(sv14.data()) << " characters(s)" << std::endl;
+    std::cout << "sv14.data() is " << sv14.data() << std::endl;
+    std::cout << "sv14 is " << sv14 << std::endl;
 
     
     return 0;
