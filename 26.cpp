@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string_view>
 #include<string>
 using namespace std;
 
@@ -174,18 +175,87 @@ int main(){
     //    std::cout << c_string << std::endl;
 
    //Fixing other escaped strings
-    std::string windows_path1 {R"(D:\sandbox\testProject\hello.txt)"};
-	std::string linux_path1 {R"(/home/username/files/hello.txt)"};
-    std::string hint1 {R"("\\" escapes a backslash character like \.)"};	
+//     std::string windows_path1 {R"(D:\sandbox\testProject\hello.txt)"};
+// 	std::string linux_path1 {R"(/home/username/files/hello.txt)"};
+//     std::string hint1 {R"("\\" escapes a backslash character like \.)"};	
 	
-	std::cout << "windows_path1 : " << windows_path1 << std::endl;
-	std::cout << "linux_path1 : " << linux_path1 << std::endl;
-	std::cout << "hint1 : " << hint1 << std::endl;
+// 	std::cout << "windows_path1 : " << windows_path1 << std::endl;
+// 	std::cout << "linux_path1 : " << linux_path1 << std::endl;
+// 	std::cout << "hint1 : " << hint1 << std::endl;
 
-     std::string sentence {R"--(The message was "(Stay out of this!)")--"};
+//      std::string sentence {R"--(The message was "(Stay out of this!)")--"};
 
-   std::cout << "sentence : " << sentence << std::endl;
+//    std::cout << "sentence : " << sentence << std::endl;
 
+
+    //  std::string message {"Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!vvHello world!Hello world!Hello world!Hello world!Hello world!"};
+    // std::string& message_copy{message};
+
+    // char * p1 = message.data();
+    // char * p2 = message_copy.data();
+
+    // std::cout << "&message[0] : " << (void*)p1 << std::endl;
+    // std::cout << "&message_copy[0] : " << (void*) p2 << std::endl;
+
+    // std::string_view sv {"Hellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"};
+    // std::string_view sv1 {sv}; // View viewing the hello literal
+    // std::string_view sv2 {sv1}; // Another view viewing hello 
+    
+    // std::cout << "Size of string_view : " << sizeof(std::string_view) << std::endl;
+    // std::cout << "size of sv1 : " << sizeof(sv1) << std::endl;
+    
+    // std::cout << "sv : " << sv << std::endl;
+    // std::cout << "sv1 : " << sv1 << std::endl;
+    // std::cout << "sv2 : " << sv2 << std::endl;
+
+    // std::string string3 {"Regular std::string"};
+    // const char * c_string {"Regular C-String"};
+    // const char char_array[]{"Char array"}; // Null terminated
+    // char char_array2[]{'H','u','g','e'}; // Non null terminated char array
+
+    // std::string_view sv3{"String litteral"};
+    // std::string_view sv4{string3};
+    // std::string_view sv5{c_string};
+    // std::string_view sv6{char_array};
+    // std::string_view sv7{sv3}; 
+    // std::string_view sv8{char_array2,std::size(char_array2)};//Non null terminated char array
+    //                                                          //Need to pass in size info
+    // std::cout << "sv3 : " << sv3 << std::endl;
+    // std::cout << "sv4 : " << sv4 << std::endl;
+    // std::cout << "sv5 : " << sv5 << std::endl;
+    // std::cout << "sv6 : " << sv6 << std::endl;
+	// std::cout << "sv7 (constructed from other string_view) : " << sv7 << std::endl;
+    // std::cout << "Non null terminated string with std::string_view : " << sv8 << std::endl;
+
+
+    // char word [] {"Dog"};
+    // std::string_view sv9{word};
+    
+    // std::cout << "word : " << sv9 << std::endl;
+    
+	// std::cout << "Changing data... " << std::endl;
+    // //Change the data
+    // word[2] = 't';
+    
+    // std::cout << "word : " << sv9 << std::endl;
+
+    const char * c_string1 { "The animals have left the region" };
+    std::string_view sv10{c_string1};
+    
+    std::cout << "sv10 : " << sv10 << std::endl;
+    
+    sv10.remove_prefix(4); // Removes "The"
+    
+	//Prints : animals have left the region
+    std::cout << "View with removed prefix(4) : " << sv10 << std::endl;
+    
+    sv10.remove_suffix(10); // Removes "the region"
+    
+	//Prints : animals have left
+    std::cout << "View with removed suffix(10) : " << sv10 << std::endl;
+    
+    //Changing the view doesn't change the viewed string : 
+    std::cout << "Original sv10 viewed string : " << c_string1 << std::endl;
 
     
     return 0;
