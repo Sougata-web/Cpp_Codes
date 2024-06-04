@@ -19,36 +19,71 @@ int main(){
     // std::cout << "Comparing Hello to World : " << str5.compare("World") << std::endl; //-1
 
 
-    std::string str1 {"Finding Nemo"}; // Replace Finding with 'Searching For'
-	std::string str1_2 {"Searcing For"};
-	std::cout << "str1 : " << str1 << std::endl;
+    // std::string str1 {"Finding Nemo"}; // Replace Finding with 'Searching For'
+	// std::string str1_2 {"Searcing For"};
+	// std::cout << "str1 : " << str1 << std::endl;
 	
-	std::cout << "Replacing..." << std::endl;
-    str1.replace(0,7,str1_2);
+	// std::cout << "Replacing..." << std::endl;
+    // str1.replace(0,7,str1_2);
 	
-    std::cout << "str1 : " << str1 << std::endl;
+    // std::cout << "str1 : " << str1 << std::endl;
 
-    std::string str2 {"Finding Nemo"};
-    std::string str3 {"The Horse was Found in the Fields Searching For Food"};
+    // std::string str2 {"Finding Nemo"};
+    // std::string str3 {"The Horse was Found in the Fields Searching For Food"};
 	
-	std::cout << "str2 : " << str2 << std::endl;
+	// std::cout << "str2 : " << str2 << std::endl;
 	
-	std::cout << "Replacing..." << std::endl;
-    str2.replace(0,7,str3,34,13);
+	// std::cout << "Replacing..." << std::endl;
+    // str2.replace(0,7,str3,34,13);
 	
-    std::cout << "str2 : " << str2 << std::endl;
+    // std::cout << "str2 : " << str2 << std::endl;
 
-    std::string str4{"Climbing Kirimanjaro"};
-    char txt4[15] {}; //Initialized with zero equivalent for characters which is '\0'
-    std::cout << "std::size(txt4) : " << std::size(txt4) << std::endl;
-    std::cout << "txt4 : " << txt4 << std::endl;
+    // std::string str4{"Climbing Kirimanjaro"};
+    // char txt4[15] {}; //Initialized with zero equivalent for characters which is '\0'
+    // std::cout << "std::size(txt4) : " << std::size(txt4) << std::endl;
+    // std::cout << "txt4 : " << txt4 << std::endl;
 	
-	std::cout << "Copying..." << std::endl;
-    str4.copy(txt4,11,9);
+	// std::cout << "Copying..." << std::endl;
+    // str4.copy(txt4,11,9);
 	
-	//Safe to print because the char array was initialized with '\0' s.
-    std::cout << "txt4 : " << txt4 << std::endl;
+	// //Safe to print because the char array was initialized with '\0' s.
+    // std::cout << "txt4 : " << txt4 << std::endl;
+
+    std::string str5{"Hello"};
+	
+    std::cout << "null char : " << '\0' << std::endl;
+	std::cout << "str5 : " << str5 << std::endl;
+    std::cout << "str5.size() : " << str5.size() << std::endl;
+    std::cout << "str5.capacity() : " << str5.capacity() << std::endl;
+	
+	std::cout << "Resizing..." << std::endl;
+    str5.resize(8); // This fills new char place holders with
+						//null character by default, you can't print and see them
     
+	std::cout << "str5 : " << str5 << std::endl;
+    std::cout << "str5.size() : " << str5.size() << std::endl;
+    std::cout << "str5.capacity() : " << str5.capacity() << std::endl;
+	
+	//Prove that they are indeed null characters
+    std::cout << "Printing through loop : " << std::endl;
+	for(size_t i{} ; i < str5.size() ; ++i){
+		std::cout << i << ":" << str5[i] << std::endl;
+	}
+    
+    //Resize and specify autofill character
+    std::cout << "Resize and specify autofill character : " << std::endl;
+    str5.resize(10,'*');
+	std::cout << "str5 : " << str5 << std::endl;
+    std::cout << "str5.size() : " << str5.size() << std::endl;
+    std::cout << "str5.capacity() : " << str5.capacity() << std::endl;
+
+
+    //Resize down
+    std::cout << "Resize down : " << std::endl;
+    str5.resize(5);
+	std::cout << "str5 : " << str5 << std::endl;
+    std::cout << "str5.size() : " << str5.size() << std::endl;
+    std::cout << "str5.capacity() : " << str5.capacity() << std::endl;
 
 
 
