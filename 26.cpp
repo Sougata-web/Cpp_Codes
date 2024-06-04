@@ -273,14 +273,21 @@ int main(){
     // std::cout << "sv13 : " << sv13 << std::endl;
     // std::cout << "std::strlen(sv13.data()) : " << std::strlen(sv13.data()) << std::endl;
 
-    std::string_view sv14 {"Ticket"};
-    sv14.remove_prefix(2);
-    sv14.remove_suffix(2);
+    // std::string_view sv14 {"Ticket"};
+    // sv14.remove_prefix(2);
+    // sv14.remove_suffix(2);
     
-    //Length info is lost when you modify the view
-    std::cout << sv14 << " has " << std::strlen(sv14.data()) << " characters(s)" << std::endl;
-    std::cout << "sv14.data() is " << sv14.data() << std::endl;
-    std::cout << "sv14 is " << sv14 << std::endl;
+    // //Length info is lost when you modify the view
+    // std::cout << sv14 << " has " << std::strlen(sv14.data()) << " characters(s)" << std::endl;
+    // std::cout << "sv14.data() is " << sv14.data() << std::endl;
+    // std::cout << "sv14 is " << sv14 << std::endl;
+
+    std::string_view sv16{"There is a huge forest in that area"};
+    
+    std::cout << "sv16 is " << sv16.length() << " characters long" << std::endl;
+    std::cout << "The front character is : " << sv16.front() << std::endl;
+    std::cout << "The back character is : " << sv16.back() << std::endl;
+    std::cout << "Substring : " << sv16.substr(0,22) << std::endl;
 
     
     return 0;
