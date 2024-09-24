@@ -1,23 +1,31 @@
-#include<iostream>
-#include<stdexcept>
+// C++ program to demonstate the use of try,catch and throw
+// in exception handling.
+
+#include <iostream>
 using namespace std;
 
-int main(){
+int main()
+{
+	int x = -1;
 
-    try{
-        int numerator =100;
-        int denominator=0;
-        int res;
+	// Some code
+	cout << "Before try \n";
 
-        if(denominator == 0){
-            throw runtime_error("Division by 0 not allowed!");
-        }
+	// try block
+	try {
+		cout << "Inside try \n";
+		if (x < 0) {
+			// throwing an exception
+			throw x;
+			cout << "After throw (Never executed) \n";
+		}
+	}
 
-        res=numerator/denominator;
-        cout<<"Result after division: "<<res;
-    }catch( const exception &e){
-        cout<<"Exception: "<<e.what()<<endl;
-    }
-    
-    return 0;
+	// catch block
+	catch (int x) {
+		cout << "Exception Caught \n";
+	}
+
+	cout << "After catch (Will be executed) \n";
+	return 0;
 }
